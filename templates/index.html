@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Baixador YouTube</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🎬 Baixador YouTube</h1>
+    <form action="/download" method="post">
+      <input type="text" name="url" placeholder="Cole o link do vídeo ou playlist..." required>
+
+      <label><input type="radio" name="tipo" value="video" checked> Vídeo (MP4)</label><br>
+      <label><input type="radio" name="tipo" value="audio"> Áudio (MP3)</label><br><br>
+
+      <button type="submit">Baixar</button>
+    </form>
+  </div>
+</body>
+</html>

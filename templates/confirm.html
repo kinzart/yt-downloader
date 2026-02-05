@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Confirmação</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>Esse link é uma playlist. O que você deseja?</h2>
+    <form action="/baixar_video" method="post">
+      <input type="hidden" name="url" value="{{ url }}">
+      <input type="hidden" name="tipo" value="{{ tipo }}">
+      <button type="submit">Baixar apenas este vídeo</button>
+    </form>
+    <form action="/baixar_playlist" method="post">
+      <input type="hidden" name="url" value="{{ url }}">
+      <input type="hidden" name="tipo" value="{{ tipo }}">
+      <button type="submit">Baixar playlist inteira</button>
+    </form>
+  </div>
+</body>
+</html>
